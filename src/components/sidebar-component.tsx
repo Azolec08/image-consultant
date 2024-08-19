@@ -18,14 +18,14 @@ export function SidebarDemo() {
   const links = [
     {
       label: "+6588370587",
-      href: "#",
+      href: "https://www.facebook.com/Arthancel?mibextid=ZbWKwL",
       icon: (
         <IconPhone className="text-blue-500 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "maricelcruz856@gmail.com",
-      href: "#",
+      href: "https://www.facebook.com/Arthancel?mibextid=ZbWKwL",
       icon: (
         <IconMail className="text-blue-500 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -51,7 +51,7 @@ export function SidebarDemo() {
     <div
       className={cn(
         "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-        "h-[550px]" // for your use case, use `h-screen` instead of `h-[60vh]`
+        "min-h-[550px] md:h-[550px] py-2" // for your use case, use `h-screen` instead of `h-[60vh]`
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
@@ -113,6 +113,9 @@ export const Dashboard = () => {
     {
       img: "/img2.jpg",
     },
+  ];
+
+  const bigImages2 = [
     {
       img: "/img3.jpg",
     },
@@ -122,13 +125,23 @@ export const Dashboard = () => {
   ];
 
   return (
-    <div className="flex flex-1">
-      <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
-        <div className="grid grid-cols-2 gap-4 flex-1">
+    <div className="flex flex-1 min-h-[100dvh] md:h-[550px]">
+      <div className=" p-2 gap-y-2 md:p-8 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col flex-1 w-full h-full">
+        <div className="flex container flex-col md:flex-row  gap-y-2 gap-x-2 h-full flex-1">
           {bigImages.map((image, index) => (
             <div
               key={index}
-              className="relative h-[15rem] w-full rounded-lg  bg-gray-100 dark:bg-neutral-800 "
+              className="relative min-h-[10rem] md:h-[14.5rem] w-full rounded-lg bg-gray-100 dark:bg-neutral-800 "
+            >
+              <DialogComponent image={image.img} />
+            </div>
+          ))}
+        </div>
+        <div className="flex container flex-col gap-y-2 md:flex-row gap-x-2 h-full ">
+          {bigImages2.map((image, index) => (
+            <div
+              key={index}
+              className="relative min-h-[10rem] md:h-[14.5rem] w-full rounded-lg bg-gray-100 dark:bg-neutral-800 "
             >
               <DialogComponent image={image.img} />
             </div>
