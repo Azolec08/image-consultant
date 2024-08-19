@@ -18,18 +18,20 @@ export function DialogComponent({ image }: ImageProp) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Image
-          src={image}
-          fill
-          alt="bigImg"
-          className="object-cover cursor-pointer"
-        />
+        <div className="w-full h-[300px] md:h-auto">
+          <Image
+            src={image}
+            fill
+            alt="bigImg"
+            className="object-cover cursor-pointer"
+          />
+        </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogDescription></DialogDescription>
         </DialogHeader>
-        <div className="relative h-[25rem] w-full py-4">
+        <div className="relative h-[20rem] md:h-[25rem] w-full py-4">
           <Image
             src={image}
             fill

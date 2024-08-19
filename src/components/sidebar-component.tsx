@@ -125,9 +125,9 @@ export const Dashboard = () => {
   ];
 
   return (
-    <div className="flex flex-1 min-h-[100dvh] md:h-[550px]">
+    <div className="flex flex-1 min-h-[700px] md:h-[550px]">
       <div className=" p-2 gap-y-2 md:p-8 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col flex-1 w-full h-full">
-        <div className="flex container flex-col md:flex-row  gap-y-2 gap-x-2 h-full flex-1">
+        <div className="flex container md:p-0 flex-col md:flex-row  gap-y-2 gap-x-2 h-full flex-1">
           {bigImages.map((image, index) => (
             <div
               key={index}
@@ -137,7 +137,7 @@ export const Dashboard = () => {
             </div>
           ))}
         </div>
-        <div className="flex container flex-col gap-y-2 md:flex-row gap-x-2 h-full ">
+        <div className="flex container md:p-0 flex-col gap-y-2 md:flex-row gap-x-2 h-full ">
           {bigImages2.map((image, index) => (
             <div
               key={index}
