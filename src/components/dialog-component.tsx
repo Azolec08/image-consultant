@@ -36,7 +36,7 @@ export function DialogComponent({ image }: ImageProp) {
             src={image}
             fill
             alt="bigImg"
-            className="object-cover cursor-pointer"
+            className="object-fill cursor-pointer"
           />
         </div>
         <DialogFooter>
